@@ -1,0 +1,23 @@
+{
+    "name": "CES Video Keyboard Controls",
+    "description": "Use right or left arrow to advance rewind CES videos. Use up or down arrows to increase or decrease playback speed.",
+    "version": "3.0",
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": [
+            "https://digital.ces.tech/*/*"],
+        "js": ["jq.2.min.js", "main.js"],
+        "run_at": "document_start"
+    }],
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "64": "icon.png"
+    }
+}
